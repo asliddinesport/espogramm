@@ -85,13 +85,13 @@ const Profile = () => {
                   height={20}
                 />
                 <p className="flex whitespace-nowrap small-medium">
-                  Edit Profile
+                  Редактировать профиль
                 </p>
               </Link>
             </div>
             <div className={`${user.id === id && "hidden"}`}>
               <Button type="button" className="shad-button_primary px-8">
-                Follow
+                Пдписаться
               </Button>
             </div>
           </div>
@@ -111,7 +111,7 @@ const Profile = () => {
               width={20}
               height={20}
             />
-            Posts
+            Посты
           </Link>
           <Link
             to={`/profile/${id}/liked-posts`}
@@ -124,7 +124,7 @@ const Profile = () => {
               width={20}
               height={20}
             />
-            Liked Posts
+            Нравится
           </Link>
         </div>
       )}
