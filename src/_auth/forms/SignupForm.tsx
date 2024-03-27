@@ -38,7 +38,7 @@ const SignupForm = () => {
       const newUser = await createUserAccount(user);
 
       if (!newUser) {
-        toast({ title: "Sign up failed. Please try again.", });
+        toast({ title: "Регистрация не удалась, попробуйте ещё раз.", });
         
         return;
       }
@@ -49,7 +49,7 @@ const SignupForm = () => {
       });
 
       if (!session) {
-        toast({ title: "Something went wrong. Please login your new account", });
+        toast({ title: "Что-то пошло не так.Пожалуйста войдите в свой новый аккаунт", });
         
         navigate("/sign-in");
         
@@ -63,7 +63,7 @@ const SignupForm = () => {
 
         navigate("/");
       } else {
-        toast({ title: "Login failed. Please try again.", });
+        toast({ title: "Вход не удался.Попробуйте ещё раз", });
         
         return;
       }
@@ -78,10 +78,10 @@ const SignupForm = () => {
         <img src="/assets/images/logo.svg" alt="logo" />
 
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
-          Create a new account
+          Создать новый аккаунт
         </h2>
         <p className="text-light-3 small-medium md:base-regular mt-2">
-          To use snapgram, Please enter your details
+          Чтобы поользоваться Espogramm, введите свои данные
         </p>
 
         <form
@@ -92,7 +92,7 @@ const SignupForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="shad-form_label">Name</FormLabel>
+                <FormLabel className="shad-form_label">Имя</FormLabel>
                 <FormControl>
                   <Input type="text" className="shad-input" {...field} />
                 </FormControl>
@@ -134,7 +134,7 @@ const SignupForm = () => {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="shad-form_label">Password</FormLabel>
+                <FormLabel className="shad-form_label">Пароль</FormLabel>
                 <FormControl>
                   <Input type="password" className="shad-input" {...field} />
                 </FormControl>
@@ -154,11 +154,11 @@ const SignupForm = () => {
           </Button>
 
           <p className="text-small-regular text-light-2 text-center mt-2">
-            Already have an account?
+            Уже есть аккаунт?
             <Link
               to="/sign-in"
               className="text-primary-500 text-small-semibold ml-1">
-              Log in
+              Вход
             </Link>
           </p>
         </form>
