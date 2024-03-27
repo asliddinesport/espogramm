@@ -45,7 +45,7 @@ const SigninForm = () => {
 
       navigate("/");
     } else {
-      toast({ title: "Login failed. Please try again.", });
+      toast({ title: "Вход не удался,пожалуйста повторите ещё раз.", });
       
       return;
     }
@@ -57,10 +57,10 @@ const SigninForm = () => {
         <img src="/assets/images/logo.svg" alt="logo" />
 
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
-          Log in to your account
+          Войдите в свой аккаунт
         </h2>
         <p className="text-light-3 small-medium md:base-regular mt-2">
-          Welcome back! Please enter your details.
+          С возвращением! Введите свои данные.
         </p>
         <form
           onSubmit={form.handleSubmit(handleSignin)}
@@ -84,7 +84,7 @@ const SigninForm = () => {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="shad-form_label">Password</FormLabel>
+                <FormLabel className="shad-form_label">Пароль</FormLabel>
                 <FormControl>
                   <Input type="password" className="shad-input" {...field} />
                 </FormControl>
@@ -104,11 +104,11 @@ const SigninForm = () => {
           </Button>
 
           <p className="text-small-regular text-light-2 text-center mt-2">
-            Don&apos;t have an account?
+            Нет аккаунта?
             <Link
               to="/sign-up"
               className="text-primary-500 text-small-semibold ml-1">
-              Sign up
+              Регистарция
             </Link>
           </p>
         </form>
